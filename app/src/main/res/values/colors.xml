@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="main_color">#95de7c</color>
+    <color name="dark_gray">#353638</color>
+    <color name="card_background">#a4d3de</color>
+    <color name="card_background_2">#f5cb87</color>
+    <color name="winner">#347dd1</color>
+    <color name="loser">#c93a3a</color>
+    <color name="draw">#cf74b0</color>
+    <color name="button">#008FB6</color>
+</resources>

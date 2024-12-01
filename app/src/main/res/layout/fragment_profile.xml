@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".profile.ProfileFragment">
+
+    <ImageView
+        android:adjustViewBounds="true"
+        android:id="@+id/profile_gradient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/profile_gradient_desc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/profile_background" />
+
+    <ImageButton
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/england_flag"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/profile_english_button_desc"
+        android:id="@+id/profile_england_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <ImageButton
+        app:layout_constraintTop_toBottomOf= "@+id/profile_england_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/serbia_flag"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/profile_serbian_button_desc"
+        android:id="@+id/profile_serbian_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <androidx.cardview.widget.CardView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="180dp"
+        android:id="@+id/profile_card_view"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="35dp"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/profile_picture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/profile_blank_profile_picture_desc"
+            android:src="@drawable/blank_profile" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:fontFamily="monospace"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@id/profile_card_view"
+        app:layout_constraintTop_toBottomOf="@id/profile_card_view"
+        app:layout_constraintStart_toStartOf="@id/profile_card_view"
+        android:text="@string/auth_name"
+        android:id="@+id/profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:fontFamily="monospace"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@id/profile_name"
+        app:layout_constraintTop_toBottomOf="@id/profile_name"
+        app:layout_constraintStart_toStartOf="@id/profile_name"
+        android:text="@string/auth_email"
+        android:id="@+id/profile_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:backgroundTint="@color/button"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/profile_email"
+        app:layout_constraintTop_toBottomOf="@id/profile_email"
+        app:layout_constraintStart_toStartOf="@id/profile_email"
+        android:layout_marginTop="50dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile_button_add_interests"
+        android:text="@string/profile_add_search_terms"/>
+
+    <Button
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:backgroundTint="@color/button"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/profile_button_add_interests"
+        app:layout_constraintTop_toBottomOf="@id/profile_button_add_interests"
+        app:layout_constraintStart_toStartOf="@id/profile_button_add_interests"
+        android:layout_marginTop="16dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile_button_update"
+        android:text="@string/profile_update_profile"/>
+
+    <Button
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:backgroundTint="@color/button"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/profile_button_update"
+        app:layout_constraintTop_toBottomOf="@id/profile_button_update"
+        app:layout_constraintStart_toStartOf="@id/profile_button_update"
+        android:layout_marginTop="16dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile_button_logout"
+        android:text="@string/profile_logout"/>
+
+    <ProgressBar
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@id/profile_button_logout"
+        app:layout_constraintTop_toBottomOf="@id/profile_button_logout"
+        app:layout_constraintStart_toStartOf="@id/profile_button_logout"
+        android:id="@+id/profile_progress_bar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
